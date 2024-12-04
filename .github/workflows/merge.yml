@@ -28,6 +28,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
+        git checkout main  # Ensure you're on the main branch
         git add merged_playlist.m3u
-        git commit -m "Update merged playlist"
-        git push
+        git commit -m "Update merged playlist" || echo "No changes to commit"
+        git push origin main || echo "Nothing to push"
