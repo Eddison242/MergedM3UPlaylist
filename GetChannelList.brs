@@ -5,7 +5,7 @@ end sub
 sub runTask()
     url = m.top.url
     if url = invalid or url = ""
-        url = "https://bit.ly/tta-m3u"
+        url = "http://m3u4u.com/m3u/4z2xnjk284a2qek9yv15"
     end if
 
     listContent = CreateObject("roSGNode", "ContentNode")
