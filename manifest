@@ -1,0 +1,11 @@
+title=Hotskull TV242
+subtitle=HotSkull Sounds IPTV
+major_version=1
+minor_version=0
+build_version=003
+mm_icon_focus_hd=pkg:/images/icon_focus_hd.png
+mm_icon_focus_sd=pkg:/images/icon_focus_sd.png
+splash_screen_fhd=pkg:/images/splash_fhd.jpg
+splash_screen_sd=pkg:/images/splash_sd.jpg
+ui_resolutions=fhd
+feed_url=http://m3u4u.com/m3u/4z2xnjk284a2qek9yv15
