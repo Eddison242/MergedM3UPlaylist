@@ -2244,10 +2244,17 @@ function ContinueWatchingMediaItems() as object
 end function
 
 ' Browser-managed IPTV playlists use separate registry slots. The original
-' iptv_playlist_url key stays untouched for compatibility with older clients.
-function IPTVBrowser_CustomSources() as object
+' function IPTVBrowser_CustomSources() as object
     section = CreateObject("roRegistrySection", "StremioRoku")
     sources = []
+    
+    ' Add your specific M3U playlist as a default source
+    sources.Push({ 
+        id: "stremio:iptv:custom_gott", 
+        name: "Gott Smart IPTV", 
+        url: "http://gott-smart.net:80/get.php?username=X5STVH8KCV25445&password=biFly6x6iL&type=m3u_plus" 
+    })
+
     for slot = 1 to 8
         suffix = slot.ToStr()
         url = Format_SafeString(section.Read("iptv_browser_" + suffix + "_url"), "")
@@ -2256,6 +2263,8 @@ function IPTVBrowser_CustomSources() as object
             if name = "" then name = I18n_T("Minha lista ") + suffix
             sources.Push({ id: "stremio:iptv:user" + suffix, name: name, url: url })
         end if
+    next ' Added missing loop closer for standard BrightScript syntax
+
     end for
     return sources
 end function
