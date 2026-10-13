@@ -1,0 +1,7 @@
+{
+  "playlistUrl": "http://gott-smart.net:80/get.php?username=X5STVH8KCV25445&password=biFly6x6iL&type=m3u_plus",
+  "epgUrl": "http://gott-smart.net:80/get.php?username=X5STVH8KCV25445&password=biFly6x6iL&type=m3u_plus",
+  "extraPlaylists": [
+    { "url": "https://iptv-org.github.io/iptv/categories/sports.m3u", "category": "Sport2" }
+  ]
+}
